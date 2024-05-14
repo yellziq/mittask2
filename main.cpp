@@ -9,12 +9,13 @@ int fib(int n) {
     }
     return fib(n - 1) + fib(n - 2);
 }
-
 int main() {
     int n;
     cout << "значение n  ";
     cin >> n;
-    int result = fib(n);
-    cout << "fib(" << n << ") = " << result << endl;
-    return 0;
+    for (int i = 1; i <= n; ++i) {
+        int result = fib(i);
+        cout << result << std::endl;
+        result = 0;
+    }
 }
